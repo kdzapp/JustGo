@@ -65,23 +65,22 @@
                             <constraint firstItem="f5a-uE-RIH" firstAttribute="top" secondItem="nwc-re-6G1" secondAttribute="bottom" constant="26" id="iq1-Ux-1SJ"/>
                             <constraint firstItem="nwc-re-6G1" firstAttribute="centerY" secondItem="Gzm-vw-PNR" secondAttribute="centerY" id="rn3-Bf-MsW"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="tX5-95-y6C" appends="YES" id="lna-vC-gbd"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="costLabel" destination="6LU-kf-kPf" id="JcP-F5-0As"/>
                         <outlet property="planeCircle" destination="nwc-re-6G1" id="02P-FT-OzW"/>
-                        <outlet property="screenGesture" destination="tX5-95-y6C" id="Gfi-4C-GCP"/>
                         <outlet property="tripMap" destination="f5a-uE-RIH" id="Rxv-Nj-2La"/>
                         <outlet property="uberButton" destination="Gzm-vw-PNR" id="6bV-yK-lpE"/>
                         <segue destination="Cp1-TX-ya1" kind="show" identifier="backHome" id="7jx-FQ-14y"/>
+                        <segue destination="Svv-Sf-A6z" kind="show" identifier="tripToFun" id="S4j-Vt-fSG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="tX5-95-y6C">
-                    <rectEdge key="edges" top="YES"/>
-                </screenEdgePanGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="kh0-Fj-TxQ">
+                    <connections>
+                        <action selector="onPan:" destination="BYZ-38-t0r" id="vJT-YE-a5g"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="495" y="321"/>
         </scene>
@@ -167,12 +166,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMD-m7-m0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-258" y="321"/>
+            <point key="canvasLocation" x="-158" y="321"/>
+        </scene>
+        <!--Activity View-->
+        <scene sceneID="v1o-1e-Zng">
+            <objects>
+                <viewController id="Svv-Sf-A6z" customClass="ActivityView" customModule="JustGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YxN-pi-tQO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topbaractivity.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jt9-Qs-0Qn">
+                                <rect key="frame" x="63" y="0.0" width="474" height="96"/>
+                                <color key="backgroundColor" red="0.82745098039215681" green="0.32941176470588235" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="1nW-5T-TKX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82745098039215681" green="0.32941176470588235" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jt9-Qs-0Qn" firstAttribute="top" secondItem="YxN-pi-tQO" secondAttribute="top" id="EME-l0-3aZ"/>
+                            <constraint firstItem="Jt9-Qs-0Qn" firstAttribute="leading" secondItem="YxN-pi-tQO" secondAttribute="leadingMargin" constant="43" id="Gh5-A8-Aa0"/>
+                            <constraint firstItem="Jt9-Qs-0Qn" firstAttribute="centerX" secondItem="YxN-pi-tQO" secondAttribute="centerX" id="b9W-CU-DOZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOM-M8-my6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228" y="321"/>
         </scene>
     </scenes>
     <resources>
         <image name="plane.png" width="540" height="960"/>
         <image name="planecircle.png" width="500" height="500"/>
         <image name="topbar.png" width="1920" height="360"/>
+        <image name="topbaractivity.png" width="1920" height="360"/>
     </resources>
 </document>

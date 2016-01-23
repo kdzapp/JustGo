@@ -46,11 +46,11 @@ class HomeView: UIViewController {
         let touch = touches.first as UITouch!
         if(touch.locationInView(self.view).y > 400)
         {
-            UIView.animateWithDuration(0.2, animations: {self.localLabel.alpha = 0.5}, completion: { finished in print("finished? \(finished)")})
+            UIView.animateWithDuration(0.2, animations: {self.localLabel.alpha = 0.5}, completion: nil)
         }
         else if(touch.locationInView(self.view).y < 200)
         {
-            UIView.animateWithDuration(0.2, animations: {self.flyLabel.alpha = 0.5}, completion: { finished in print("finished? \(finished)")})
+            UIView.animateWithDuration(0.2, animations: {self.flyLabel.alpha = 0.5}, completion: nil)
         }
         else
         {
@@ -90,7 +90,6 @@ class HomeView: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        plane.frame = CGRect(origin: location, size: size)
         // Dispose of any resources that can be recreated.
     }
 
@@ -99,7 +98,7 @@ class HomeView: UIViewController {
         UIView.animateWithDuration(2.0) { () -> Void in
             self.blurEffect.alpha = 0
         }
-        UIView.animateWithDuration(2.0, delay: 1.5, usingSpringWithDamping: 0.1, initialSpringVelocity: 10, options: .BeginFromCurrentState, animations: { () -> Void in
+        UIView.animateWithDuration(2.0, delay: 1.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 10, options: .BeginFromCurrentState, animations: { () -> Void in
             self.location.y = self.location.y + 70
             self.plane.frame = CGRect(origin: self.location, size: self.size)
             //self.location.y = self.location.y - 70

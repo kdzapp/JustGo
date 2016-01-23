@@ -13,7 +13,6 @@ import MapKit
 
 class JustGoView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
 
-    @IBOutlet var screenGesture: UIScreenEdgePanGestureRecognizer!
     @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var tripMap: MKMapView!
     @IBOutlet weak var planeCircle: UIImageView!
@@ -24,7 +23,8 @@ class JustGoView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
     var coords = CLLocationCoordinate2D(latitude: 40.7127, longitude: 74.0059)
     var address: [String: AnyObject]?
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         getLocation()
@@ -39,8 +39,15 @@ class JustGoView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
         {
             disableUber()
             planeCircle.alpha = 0.75
+            getAirFare(convertLocation(gotoLocation))
         }
     }
+    
+    @IBAction func onPan(sender: AnyObject?)
+    {
+        print("Working!")
+    }
+    
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?
     {
@@ -71,6 +78,13 @@ class JustGoView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
+        
+        NSLog("\(locationManager.location)")
+        while(locationManager.location == nil)
+        {
+            
+        }
+        
         if CLLocationManager.locationServicesEnabled()
         {
             tripMap.showsUserLocation = true;
@@ -205,15 +219,13 @@ class JustGoView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
 //        "kABPersonAddressCountryKey": location,
 //        "kABPersonAddressCountryCodeKey": location]
     }
+    
+    func getAirFare(location: CLLocation)
+    {
+        //This is for SkyScanner.... getFare for a specified location
+        costLabel.text = "$223"
+    }
 }
-
-func getAirFare(location: String) -> Int
-{
-    //This is for SkyScanner.... getFare for a specified location
-    return 0
-}
-
-
 
 
 

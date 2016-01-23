@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		272FDFF61C535D33003747DA /* planecircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 272FDFF51C535D33003747DA /* planecircle.png */; };
+		272FDFF81C53FD5A003747DA /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272FDFF71C53FD5A003747DA /* ActivityView.swift */; };
+		272FDFFA1C53FE2C003747DA /* topbaractivity.png in Resources */ = {isa = PBXBuildFile; fileRef = 272FDFF91C53FE2C003747DA /* topbaractivity.png */; };
+		272FE00A1C5428DC003747DA /* UberRides.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272FDFED1C53533F003747DA /* UberRides.framework */; };
+		272FE00B1C5428DC003747DA /* UberRides.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 272FDFED1C53533F003747DA /* UberRides.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		279CEBF41C5175990017C708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CEBF31C5175990017C708 /* AppDelegate.swift */; };
 		279CEBF61C5175990017C708 /* JustGoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CEBF51C5175990017C708 /* JustGoView.swift */; };
 		279CEBF91C5175990017C708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279CEBF71C5175990017C708 /* Main.storyboard */; };
@@ -37,6 +41,20 @@
 			remoteGlobalIDString = AC04047F1BFACD1D00AC1501;
 			remoteInfo = UberRidesTests;
 		};
+		272FE0071C5428CF003747DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 272FDFE71C53533F003747DA /* UberRides.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AC0404741BFACD1D00AC1501;
+			remoteInfo = UberRides;
+		};
+		272FE00C1C5428DC003747DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 272FDFE71C53533F003747DA /* UberRides.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AC0404741BFACD1D00AC1501;
+			remoteInfo = UberRides;
+		};
 		279CEC051C5175990017C708 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 279CEBE81C5175990017C708 /* Project object */;
@@ -53,9 +71,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		272FE00E1C5428DC003747DA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				272FE00B1C5428DC003747DA /* UberRides.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		272FDFE71C53533F003747DA /* UberRides.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UberRides.xcodeproj; path = UberSource/UberRides.xcodeproj; sourceTree = "<group>"; };
 		272FDFF51C535D33003747DA /* planecircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planecircle.png; sourceTree = SOURCE_ROOT; };
+		272FDFF71C53FD5A003747DA /* ActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		272FDFF91C53FE2C003747DA /* topbaractivity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topbaractivity.png; sourceTree = SOURCE_ROOT; };
 		279CEBF01C5175990017C708 /* JustGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279CEBF31C5175990017C708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		279CEBF51C5175990017C708 /* JustGoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustGoView.swift; sourceTree = "<group>"; };
@@ -81,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272FE00A1C5428DC003747DA /* UberRides.framework in Frameworks */,
 				27DDA94F1C532401006BEECA /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +175,7 @@
 				279CEBF31C5175990017C708 /* AppDelegate.swift */,
 				279CEBF51C5175990017C708 /* JustGoView.swift */,
 				27DDA9431C5176E7006BEECA /* HomeView.swift */,
+				272FDFF71C53FD5A003747DA /* ActivityView.swift */,
 				279CEBF71C5175990017C708 /* Main.storyboard */,
 				279CEBFA1C5175990017C708 /* Assets.xcassets */,
 				279CEBFC1C5175990017C708 /* LaunchScreen.storyboard */,
@@ -173,6 +209,7 @@
 				272FDFF51C535D33003747DA /* planecircle.png */,
 				27DDA94C1C530051006BEECA /* circle.png */,
 				27DDA9591C534387006BEECA /* topbar.png */,
+				272FDFF91C53FE2C003747DA /* topbaractivity.png */,
 			);
 			name = imgs;
 			path = JustGo;
@@ -188,10 +225,13 @@
 				279CEBEC1C5175990017C708 /* Sources */,
 				279CEBED1C5175990017C708 /* Frameworks */,
 				279CEBEE1C5175990017C708 /* Resources */,
+				272FE00E1C5428DC003747DA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				272FE0081C5428CF003747DA /* PBXTargetDependency */,
+				272FE00D1C5428DC003747DA /* PBXTargetDependency */,
 			);
 			name = JustGo;
 			productName = JustGo;
@@ -251,6 +291,7 @@
 				TargetAttributes = {
 					279CEBEF1C5175990017C708 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 62TAE2M52X;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -317,6 +358,7 @@
 			files = (
 				279CEBFE1C5175990017C708 /* LaunchScreen.storyboard in Resources */,
 				27DDA94B1C51FD58006BEECA /* plane.png in Resources */,
+				272FDFFA1C53FE2C003747DA /* topbaractivity.png in Resources */,
 				27DDA94D1C530051006BEECA /* circle.png in Resources */,
 				279CEBFB1C5175990017C708 /* Assets.xcassets in Resources */,
 				279CEBF91C5175990017C708 /* Main.storyboard in Resources */,
@@ -425,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27DDA9441C5176E7006BEECA /* HomeView.swift in Sources */,
+				272FDFF81C53FD5A003747DA /* ActivityView.swift in Sources */,
 				279CEBF61C5175990017C708 /* JustGoView.swift in Sources */,
 				279CEBF41C5175990017C708 /* AppDelegate.swift in Sources */,
 			);
@@ -449,6 +492,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		272FE0081C5428CF003747DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UberRides;
+			targetProxy = 272FE0071C5428CF003747DA /* PBXContainerItemProxy */;
+		};
+		272FE00D1C5428DC003747DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UberRides;
+			targetProxy = 272FE00C1C5428DC003747DA /* PBXContainerItemProxy */;
+		};
 		279CEC061C5175990017C708 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 279CEBEF1C5175990017C708 /* JustGo */;
@@ -517,7 +570,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -555,7 +608,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -566,10 +619,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = JustGo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kyle.JustGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cac1128b-c73f-4bc1-9746-2a5a82aaf068";
 			};
 			name = Debug;
 		};
@@ -577,10 +636,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = JustGo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kyle.JustGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cac1128b-c73f-4bc1-9746-2a5a82aaf068";
 			};
 			name = Release;
 		};
