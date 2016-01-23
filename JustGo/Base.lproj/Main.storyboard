@@ -37,8 +37,8 @@
                                     <constraint firstAttribute="width" constant="460" id="SuE-zp-UvM"/>
                                 </constraints>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LU-kf-kPf">
-                                <rect key="frame" x="194" y="89" width="212" height="107"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LU-kf-kPf">
+                                <rect key="frame" x="194" y="120" width="212" height="107"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="212" id="BvX-DU-ebw"/>
                                     <constraint firstAttribute="height" constant="107" id="uvo-V1-iaQ"/>
@@ -49,6 +49,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.60784313725490191" green="0.34901960784313724" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Gzm-vw-PNR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1L0-wZ-YDt"/>
                             <constraint firstItem="Aas-Ry-N8k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="45p-rD-vkE"/>
@@ -59,13 +60,14 @@
                             <constraint firstItem="6LU-kf-kPf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JGX-er-zuR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gzm-vw-PNR" secondAttribute="bottom" constant="317" id="QbY-gM-m8c"/>
                             <constraint firstItem="f5a-uE-RIH" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="TQa-oQ-0i6"/>
-                            <constraint firstItem="6LU-kf-kPf" firstAttribute="top" secondItem="Aas-Ry-N8k" secondAttribute="bottom" constant="8" symbolic="YES" id="ZJD-q8-h1b"/>
+                            <constraint firstItem="6LU-kf-kPf" firstAttribute="top" secondItem="Aas-Ry-N8k" secondAttribute="bottom" constant="39" id="ZJD-q8-h1b"/>
                             <constraint firstItem="Aas-Ry-N8k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fJC-0Z-GR7"/>
                             <constraint firstItem="f5a-uE-RIH" firstAttribute="top" secondItem="nwc-re-6G1" secondAttribute="bottom" constant="26" id="iq1-Ux-1SJ"/>
                             <constraint firstItem="nwc-re-6G1" firstAttribute="centerY" secondItem="Gzm-vw-PNR" secondAttribute="centerY" id="rn3-Bf-MsW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="costLabel" destination="6LU-kf-kPf" id="JcP-F5-0As"/>
                         <outlet property="planeCircle" destination="nwc-re-6G1" id="02P-FT-OzW"/>
                         <outlet property="tripMap" destination="f5a-uE-RIH" id="Rxv-Nj-2La"/>
                         <outlet property="uberButton" destination="Gzm-vw-PNR" id="6bV-yK-lpE"/>
@@ -73,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="472" y="321"/>
+            <point key="canvasLocation" x="495" y="321"/>
         </scene>
         <!--Home View-->
         <scene sceneID="P4o-KB-rY0">

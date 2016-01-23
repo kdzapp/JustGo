@@ -13,6 +13,7 @@ import MapKit
 
 class JustGoView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
 
+    @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var tripMap: MKMapView!
     @IBOutlet weak var planeCircle: UIImageView!
     @IBOutlet weak var uberButton: RequestButton!
@@ -25,12 +26,12 @@ class JustGoView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         getLocation()
-        let newLocation = createLocation()
-        print(newLocation)
+        let gotoLocation: CLLocationCoordinate2D = createLocation()
 
         if(localBool)
         {
             planeCircle.alpha = 0
+            calculateUberCost(convertLocation(gotoLocation))
         }
         else
         {
@@ -108,11 +109,9 @@ class JustGoView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
     
     func createLocation() -> CLLocationCoordinate2D
     {
-        //getCurrentLocation
-        //locationManager.location?.coordinate
 
-//        if(localBool)
-//        {
+        if(localBool)
+        {
             var lat: Double
             var long: Double
             let addition = Int(arc4random_uniform(1))
@@ -135,12 +134,55 @@ class JustGoView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
             tripMap.addAnnotation(dropPin)
         
             return gotoLocation
-//        }
-//        else
-//        {
-//            //Generate Random City/Place to Travel to
-//            //travelMethod(currentLocation, randomCity, false)
-//        }
+        }
+        else
+        {
+            //Generate Random City/Place to Travel to
+            //travelMethod(currentLocation, randomCity, false)
+            
+            let testLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 48.8567, longitude: 2.3508)
+            
+            return testLocation
+        }
+    }
+    
+    func convertLocation(location: CLLocationCoordinate2D) -> CLLocation
+    {
+        let lat: CLLocationDegrees = location.latitude
+        let long: CLLocationDegrees = location.longitude
+        
+        let newCLLocation: CLLocation = CLLocation(latitude: lat, longitude: long)
+        return newCLLocation
+    }
+    
+    func calculateUberCost(gotoLocation: CLLocation)
+    {
+        let distance: CLLocationDistance = (locationManager.location?.distanceFromLocation(gotoLocation))!
+        let currentLat = String(locationManager.location?.coordinate.latitude)
+        let currentLong = String(locationManager.location?.coordinate.longitude)
+        let gotoLat = String(gotoLocation.coordinate.latitude)
+        let gotoLong = String(gotoLocation.coordinate.longitude)
+        
+        uberButton.setProductID("RandomLocationGenerator")
+        uberButton.setPickupLocation(latitude: currentLat, longitude: currentLong, nickname: "Your Current Location")
+        uberButton.setDropoffLocation(latitude: gotoLat, longitude: gotoLong, nickname: "Random Place to Go")
+        
+        if(distance > 16093) //Is Greater than 10 miles
+        {
+            costLabel.text = "~$11"
+        }
+        else if(distance > 11265) //Is Greater than 7 miles
+        {
+            costLabel.text = "~$8"
+        }
+        else if(distance > 6437) //Is Greater than 4 miles
+        {
+            costLabel.text = "~$6"
+        }
+        else
+        {
+            costLabel.text = "~$4"
+        }
     }
     
     func setAddress()
