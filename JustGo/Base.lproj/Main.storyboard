@@ -67,6 +67,7 @@
                     </view>
                     <connections>
                         <outlet property="planeCircle" destination="nwc-re-6G1" id="02P-FT-OzW"/>
+                        <outlet property="tripMap" destination="f5a-uE-RIH" id="Rxv-Nj-2La"/>
                         <outlet property="uberButton" destination="Gzm-vw-PNR" id="6bV-yK-lpE"/>
                     </connections>
                 </viewController>

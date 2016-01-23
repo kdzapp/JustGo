@@ -8,16 +8,26 @@
 
 import UIKit
 import UberRides
+import CoreLocation
+import MapKit
 
-class JustGoView: UIViewController {
+class JustGoView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
 
+    @IBOutlet weak var tripMap: MKMapView!
     @IBOutlet weak var planeCircle: UIImageView!
     @IBOutlet weak var uberButton: RequestButton!
+    var locationManager: CLLocationManager!
     var localBool: Bool = true
+    var coords = CLLocationCoordinate2D(latitude: 40.7127, longitude: 74.0059)
+    var address: [String: AnyObject]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        getLocation()
+        let newLocation = createLocation()
+        print(newLocation)
+
         if(localBool)
         {
             planeCircle.alpha = 0
@@ -27,6 +37,16 @@ class JustGoView: UIViewController {
             disableUber()
             planeCircle.alpha = 0.75
         }
+    }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?
+    {
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        let annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier("CustomAnnotation") as MKAnnotationView!
+        
+        annotationView.annotation = annotation;
+        
+        return annotationView
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +60,99 @@ class JustGoView: UIViewController {
         uberButton.enabled = false;
         uberButton.alpha = 0;
     }
+    
+    func getLocation()
+    {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        if CLLocationManager.locationServicesEnabled()
+        {
+            tripMap.showsUserLocation = true;
+            let span = MKCoordinateSpanMake(0.3, 0.3)
+            let region = MKCoordinateRegion(center: (locationManager.location?.coordinate)!, span: span)
+            tripMap.setRegion(region, animated: true)
+        }
+        else
+        {
+            print("Location Not Active")
+        }
+    }
+    
+    func getDirections(goto: CLLocationCoordinate2D, locationName: [String: AnyObject]?)
+    {
+        let destinationConversion = MKPlacemark(coordinate: goto, addressDictionary: locationName)
+        let destination = MKMapItem(placemark: destinationConversion)
+        let request = MKDirectionsRequest()
+        request.transportType = MKDirectionsTransportType.Automobile
+        request.destination = destination
+        request.source = MKMapItem.mapItemForCurrentLocation()
+        request.requestsAlternateRoutes = false
+        
+        let directions = MKDirections(request: request)
+        
+        directions.calculateDirectionsWithCompletionHandler({
+            (response: MKDirectionsResponse?, error: NSError?) in
+            if((error) != nil)
+            {
+                print(error)
+            }
+            else
+            {
+                print(response)
+            }
+        })
+    }
+    
+    func createLocation() -> CLLocationCoordinate2D
+    {
+        //getCurrentLocation
+        //locationManager.location?.coordinate
+
+//        if(localBool)
+//        {
+            var lat: Double
+            var long: Double
+            let addition = Int(arc4random_uniform(1))
+        
+            print(addition)
+            if(addition == 1)
+            {
+                lat = (locationManager.location?.coordinate.latitude)! + Double(arc4random_uniform(20))*0.01
+                long = (locationManager.location?.coordinate.longitude)! + Double(arc4random_uniform(20))*0.01
+            }
+            else
+            {
+                lat = (locationManager.location?.coordinate.latitude)! - Double(arc4random_uniform(20))*0.01
+                long = (locationManager.location?.coordinate.longitude)! - Double(arc4random_uniform(20))*0.01
+            }
+            let gotoLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: lat, longitude: long)
+        
+            let dropPin = MKPointAnnotation()
+            dropPin.coordinate = gotoLocation
+            tripMap.addAnnotation(dropPin)
+        
+            return gotoLocation
+//        }
+//        else
+//        {
+//            //Generate Random City/Place to Travel to
+//            //travelMethod(currentLocation, randomCity, false)
+//        }
+    }
+    
+    func setAddress()
+    {
+//        address = [
+//        "kABPersonAddressStreetKey": location,
+//        "kABPersonAddressCityKey": location,
+//        "kABPersonAddressStateKey": location,
+//        "kABPersonAddressZIPKey": location,
+//        "kABPersonAddressCountryKey": location,
+//        "kABPersonAddressCountryCodeKey": location]
+    }
 }
 
 func createActivity(location: Bool) -> Void
@@ -48,43 +161,6 @@ func createActivity(location: Bool) -> Void
     //Average Cost? NSDictionary?
     //get location of activity
     //return location of activity
-}
-
-func createLocation(local: Bool) -> Void
-{
-    //getCurrentLocation
-    if(local)
-    {
-        //travelMethod(currentLocation, xActivityLocation, true)
-        //xActivityLocation = currentLocation
-    }
-    else
-    {
-        //Generate Random City/Place to Travel to
-        //travelMethod(currentLocation, randomCity, false)
-    }
-}
-
-func travelMethod(currentLocation: String, gotoLocation: String, local: Bool) -> Void
-{
-    if(local)
-    {
-        //let activityLocation = getActivity(gotoLocation) -> Return CLLocation..
-        //uberApiFunction(currentLocation, activityLocation);
-        //Yes, you won't be able to use strings... you must use Location objects
-    }
-    else
-    {
-        //SkyScanner HTTP Request for location provided...
-        //getFare(location)
-        //Set Fare in JustGoView and Symbol (Circle around a Plane)
-    }
-}
-
-func createDirections(location: String)
-{
-    //Create directions on the map to the location... 
-    //if posisble pass through 'type' (plane or car) and specify on map
 }
 
 func getAirFare(location: String) -> Int
