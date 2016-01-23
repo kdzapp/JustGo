@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		279CEBF41C5175990017C708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CEBF31C5175990017C708 /* AppDelegate.swift */; };
+		279CEBF61C5175990017C708 /* JustGoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CEBF51C5175990017C708 /* JustGoView.swift */; };
+		279CEBF91C5175990017C708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279CEBF71C5175990017C708 /* Main.storyboard */; };
+		279CEBFB1C5175990017C708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 279CEBFA1C5175990017C708 /* Assets.xcassets */; };
+		279CEBFE1C5175990017C708 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279CEBFC1C5175990017C708 /* LaunchScreen.storyboard */; };
+		279CEC091C5175990017C708 /* JustGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CEC081C5175990017C708 /* JustGoTests.swift */; };
+		279CEC141C5175990017C708 /* JustGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CEC131C5175990017C708 /* JustGoUITests.swift */; };
+		27DDA9441C5176E7006BEECA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDA9431C5176E7006BEECA /* HomeView.swift */; };
+		27DDA94B1C51FD58006BEECA /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DDA94A1C51FD58006BEECA /* plane.png */; };
+		27DDA94D1C530051006BEECA /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DDA94C1C530051006BEECA /* circle.png */; };
+		27DDA94F1C532401006BEECA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DDA94E1C532401006BEECA /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		279CEC051C5175990017C708 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 279CEBE81C5175990017C708 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 279CEBEF1C5175990017C708;
+			remoteInfo = JustGo;
+		};
+		279CEC101C5175990017C708 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 279CEBE81C5175990017C708 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 279CEBEF1C5175990017C708;
+			remoteInfo = JustGo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		279CEBF01C5175990017C708 /* JustGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		279CEBF31C5175990017C708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		279CEBF51C5175990017C708 /* JustGoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustGoView.swift; sourceTree = "<group>"; };
+		279CEBF81C5175990017C708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		279CEBFA1C5175990017C708 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		279CEBFD1C5175990017C708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		279CEBFF1C5175990017C708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		279CEC041C5175990017C708 /* JustGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		279CEC081C5175990017C708 /* JustGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustGoTests.swift; sourceTree = "<group>"; };
+		279CEC0A1C5175990017C708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		279CEC0F1C5175990017C708 /* JustGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		279CEC131C5175990017C708 /* JustGoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustGoUITests.swift; sourceTree = "<group>"; };
+		279CEC151C5175990017C708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27DDA9431C5176E7006BEECA /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		27DDA94A1C51FD58006BEECA /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = SOURCE_ROOT; };
+		27DDA94C1C530051006BEECA /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = SOURCE_ROOT; };
+		27DDA94E1C532401006BEECA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		279CEBED1C5175990017C708 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27DDA94F1C532401006BEECA /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		279CEC011C5175990017C708 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		279CEC0C1C5175990017C708 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		279CEBE71C5175990017C708 = {
+			isa = PBXGroup;
+			children = (
+				27DDA94E1C532401006BEECA /* MapKit.framework */,
+				279CEBF21C5175990017C708 /* JustGo */,
+				279CEC071C5175990017C708 /* JustGoTests */,
+				279CEC121C5175990017C708 /* JustGoUITests */,
+				279CEBF11C5175990017C708 /* Products */,
+				27DDA9451C51DD43006BEECA /* imgs */,
+			);
+			sourceTree = "<group>";
+		};
+		279CEBF11C5175990017C708 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				279CEBF01C5175990017C708 /* JustGo.app */,
+				279CEC041C5175990017C708 /* JustGoTests.xctest */,
+				279CEC0F1C5175990017C708 /* JustGoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		279CEBF21C5175990017C708 /* JustGo */ = {
+			isa = PBXGroup;
+			children = (
+				279CEBF31C5175990017C708 /* AppDelegate.swift */,
+				279CEBF51C5175990017C708 /* JustGoView.swift */,
+				27DDA9431C5176E7006BEECA /* HomeView.swift */,
+				279CEBF71C5175990017C708 /* Main.storyboard */,
+				279CEBFA1C5175990017C708 /* Assets.xcassets */,
+				279CEBFC1C5175990017C708 /* LaunchScreen.storyboard */,
+				279CEBFF1C5175990017C708 /* Info.plist */,
+			);
+			path = JustGo;
+			sourceTree = "<group>";
+		};
+		279CEC071C5175990017C708 /* JustGoTests */ = {
+			isa = PBXGroup;
+			children = (
+				279CEC081C5175990017C708 /* JustGoTests.swift */,
+				279CEC0A1C5175990017C708 /* Info.plist */,
+			);
+			path = JustGoTests;
+			sourceTree = "<group>";
+		};
+		279CEC121C5175990017C708 /* JustGoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				279CEC131C5175990017C708 /* JustGoUITests.swift */,
+				279CEC151C5175990017C708 /* Info.plist */,
+			);
+			path = JustGoUITests;
+			sourceTree = "<group>";
+		};
+		27DDA9451C51DD43006BEECA /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				27DDA94A1C51FD58006BEECA /* plane.png */,
+				27DDA94C1C530051006BEECA /* circle.png */,
+			);
+			name = imgs;
+			path = JustGo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		279CEBEF1C5175990017C708 /* JustGo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 279CEC181C5175990017C708 /* Build configuration list for PBXNativeTarget "JustGo" */;
+			buildPhases = (
+				279CEBEC1C5175990017C708 /* Sources */,
+				279CEBED1C5175990017C708 /* Frameworks */,
+				279CEBEE1C5175990017C708 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JustGo;
+			productName = JustGo;
+			productReference = 279CEBF01C5175990017C708 /* JustGo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		279CEC031C5175990017C708 /* JustGoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 279CEC1B1C5175990017C708 /* Build configuration list for PBXNativeTarget "JustGoTests" */;
+			buildPhases = (
+				279CEC001C5175990017C708 /* Sources */,
+				279CEC011C5175990017C708 /* Frameworks */,
+				279CEC021C5175990017C708 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				279CEC061C5175990017C708 /* PBXTargetDependency */,
+			);
+			name = JustGoTests;
+			productName = JustGoTests;
+			productReference = 279CEC041C5175990017C708 /* JustGoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		279CEC0E1C5175990017C708 /* JustGoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 279CEC1E1C5175990017C708 /* Build configuration list for PBXNativeTarget "JustGoUITests" */;
+			buildPhases = (
+				279CEC0B1C5175990017C708 /* Sources */,
+				279CEC0C1C5175990017C708 /* Frameworks */,
+				279CEC0D1C5175990017C708 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				279CEC111C5175990017C708 /* PBXTargetDependency */,
+			);
+			name = JustGoUITests;
+			productName = JustGoUITests;
+			productReference = 279CEC0F1C5175990017C708 /* JustGoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		279CEBE81C5175990017C708 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Kyle Zappitell";
+				TargetAttributes = {
+					279CEBEF1C5175990017C708 = {
+						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					279CEC031C5175990017C708 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 279CEBEF1C5175990017C708;
+					};
+					279CEC0E1C5175990017C708 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 279CEBEF1C5175990017C708;
+					};
+				};
+			};
+			buildConfigurationList = 279CEBEB1C5175990017C708 /* Build configuration list for PBXProject "JustGo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 279CEBE71C5175990017C708;
+			productRefGroup = 279CEBF11C5175990017C708 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				279CEBEF1C5175990017C708 /* JustGo */,
+				279CEC031C5175990017C708 /* JustGoTests */,
+				279CEC0E1C5175990017C708 /* JustGoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		279CEBEE1C5175990017C708 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279CEBFE1C5175990017C708 /* LaunchScreen.storyboard in Resources */,
+				27DDA94B1C51FD58006BEECA /* plane.png in Resources */,
+				27DDA94D1C530051006BEECA /* circle.png in Resources */,
+				279CEBFB1C5175990017C708 /* Assets.xcassets in Resources */,
+				279CEBF91C5175990017C708 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		279CEC021C5175990017C708 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		279CEC0D1C5175990017C708 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		279CEBEC1C5175990017C708 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27DDA9441C5176E7006BEECA /* HomeView.swift in Sources */,
+				279CEBF61C5175990017C708 /* JustGoView.swift in Sources */,
+				279CEBF41C5175990017C708 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		279CEC001C5175990017C708 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279CEC091C5175990017C708 /* JustGoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		279CEC0B1C5175990017C708 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279CEC141C5175990017C708 /* JustGoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		279CEC061C5175990017C708 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 279CEBEF1C5175990017C708 /* JustGo */;
+			targetProxy = 279CEC051C5175990017C708 /* PBXContainerItemProxy */;
+		};
+		279CEC111C5175990017C708 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 279CEBEF1C5175990017C708 /* JustGo */;
+			targetProxy = 279CEC101C5175990017C708 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		279CEBF71C5175990017C708 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				279CEBF81C5175990017C708 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		279CEBFC1C5175990017C708 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				279CEBFD1C5175990017C708 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		279CEC161C5175990017C708 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		279CEC171C5175990017C708 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		279CEC191C5175990017C708 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JustGo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kyle.JustGo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		279CEC1A1C5175990017C708 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JustGo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kyle.JustGo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		279CEC1C1C5175990017C708 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JustGoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kyle.JustGoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JustGo.app/JustGo";
+			};
+			name = Debug;
+		};
+		279CEC1D1C5175990017C708 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JustGoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kyle.JustGoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JustGo.app/JustGo";
+			};
+			name = Release;
+		};
+		279CEC1F1C5175990017C708 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JustGoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kyle.JustGoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JustGo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		279CEC201C5175990017C708 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JustGoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kyle.JustGoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JustGo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		279CEBEB1C5175990017C708 /* Build configuration list for PBXProject "JustGo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				279CEC161C5175990017C708 /* Debug */,
+				279CEC171C5175990017C708 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		279CEC181C5175990017C708 /* Build configuration list for PBXNativeTarget "JustGo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				279CEC191C5175990017C708 /* Debug */,
+				279CEC1A1C5175990017C708 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		279CEC1B1C5175990017C708 /* Build configuration list for PBXNativeTarget "JustGoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				279CEC1C1C5175990017C708 /* Debug */,
+				279CEC1D1C5175990017C708 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		279CEC1E1C5175990017C708 /* Build configuration list for PBXNativeTarget "JustGoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				279CEC1F1C5175990017C708 /* Debug */,
+				279CEC201C5175990017C708 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 279CEBE81C5175990017C708 /* Project object */;
+}

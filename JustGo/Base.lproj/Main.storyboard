@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Cp1-TX-ya1">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Just Go View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="JustGoView" customModule="JustGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472" y="321"/>
+        </scene>
+        <!--Home View-->
+        <scene sceneID="P4o-KB-rY0">
+            <objects>
+                <viewController id="Cp1-TX-ya1" customClass="HomeView" customModule="JustGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZMd-SH-2cj"/>
+                        <viewControllerLayoutGuide type="bottom" id="0vI-wp-jd4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="center" id="Pce-b2-zWL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLK-Ve-xhI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="local" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnm-1x-DqP">
+                                <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plane.png" translatesAutoresizingMaskIntoConstraints="NO" id="9uf-sw-lzz">
+                                <rect key="frame" x="200" y="220" width="200" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="hZc-1s-JZx"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.22745098039215686" green="0.0" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0vI-wp-jd4" firstAttribute="top" secondItem="DLK-Ve-xhI" secondAttribute="bottom" constant="400" id="BL7-UU-gyE"/>
+                            <constraint firstItem="9uf-sw-lzz" firstAttribute="centerX" secondItem="DLK-Ve-xhI" secondAttribute="centerX" id="Bf6-Fk-Dam"/>
+                            <constraint firstItem="hnm-1x-DqP" firstAttribute="centerX" secondItem="Pce-b2-zWL" secondAttribute="centerX" id="H02-ed-Yvc"/>
+                            <constraint firstItem="9uf-sw-lzz" firstAttribute="centerY" secondItem="Pce-b2-zWL" secondAttribute="centerY" id="Nzq-qx-Q7c"/>
+                            <constraint firstItem="hnm-1x-DqP" firstAttribute="bottom" secondItem="0vI-wp-jd4" secondAttribute="top" id="ZXc-5F-5ks"/>
+                            <constraint firstItem="9uf-sw-lzz" firstAttribute="top" secondItem="ZMd-SH-2cj" secondAttribute="bottom" constant="200" id="Zkd-2S-RAp"/>
+                            <constraint firstItem="hnm-1x-DqP" firstAttribute="top" secondItem="9uf-sw-lzz" secondAttribute="bottom" constant="20" id="aln-Dh-k2Y"/>
+                            <constraint firstItem="hnm-1x-DqP" firstAttribute="leading" secondItem="DLK-Ve-xhI" secondAttribute="leading" id="cRn-An-5d5"/>
+                            <constraint firstItem="9uf-sw-lzz" firstAttribute="centerX" secondItem="Pce-b2-zWL" secondAttribute="centerX" id="oHg-1d-OpG"/>
+                            <constraint firstItem="DLK-Ve-xhI" firstAttribute="leading" secondItem="Pce-b2-zWL" secondAttribute="leading" id="pp8-fm-JUo"/>
+                            <constraint firstItem="DLK-Ve-xhI" firstAttribute="top" secondItem="Pce-b2-zWL" secondAttribute="top" id="zaw-CW-quG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="flyLabel" destination="DLK-Ve-xhI" id="gfW-m8-ZPe"/>
+                        <outlet property="localLabel" destination="hnm-1x-DqP" id="bOj-Na-lm0"/>
+                        <outlet property="plane" destination="9uf-sw-lzz" id="5cj-ZE-Ixk"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toJustGo" id="leW-dl-Aps"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qMD-m7-m0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-258" y="321"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plane.png" width="540" height="960"/>
+    </resources>
+</document>
