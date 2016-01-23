@@ -137,7 +137,7 @@ public class RequestButton: UIButton {
     private func setContent() {
         // add title label
         let bundle = NSBundle(forClass: RequestButton.self)
-        uberTitleLabel.text = NSLocalizedString("Uber There", bundle: bundle, comment: "Tap to Go!")
+        uberTitleLabel.text = NSLocalizedString("Uber", bundle: bundle, comment: "Tap to Go!")
         uberTitleLabel.font = UIFont.systemFontOfSize(17)
         uberTitleLabel.numberOfLines = 1;
         
@@ -199,7 +199,7 @@ public class RequestButton: UIButton {
         case .Black:
             uberTitleLabel.textColor = uberUIColor(.UberWhite)
             backgroundColor = uberUIColor(.UberBlack)
-        case .White :
+        case .White:
             uberTitleLabel.textColor = uberUIColor(.UberBlack)
             backgroundColor = uberUIColor(.UberWhite)
         }

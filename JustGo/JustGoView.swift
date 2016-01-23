@@ -11,6 +11,7 @@ import UberRides
 
 class JustGoView: UIViewController {
 
+    @IBOutlet weak var planeCircle: UIImageView!
     @IBOutlet weak var uberButton: RequestButton!
     var localBool: Bool = true
     
@@ -19,10 +20,12 @@ class JustGoView: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         if(localBool)
         {
+            planeCircle.alpha = 0
         }
         else
         {
             disableUber()
+            planeCircle.alpha = 0.75
         }
     }
 
@@ -37,8 +40,6 @@ class JustGoView: UIViewController {
         uberButton.enabled = false;
         uberButton.alpha = 0;
     }
-
-
 }
 
 func createActivity(location: Bool) -> Void
@@ -94,7 +95,9 @@ func getAirFare(location: String) -> Int
 
 func getUberFare(currentLocation: String, gotoLocation: String)
 {
-    //User UberAPI to get cost of travel from currentLocation to gotoLocation
+   // button.setProductID("abc123-productID")
+   // button.setPickupLocation(latitude: "37.770", longitude: "-122.466", nickname: "California Academy of Sciences")
+   // button.setDropoffLocation(latitude: "37.791", longitude: "-122.405", nickname: "Pier 39")
 }
 
 

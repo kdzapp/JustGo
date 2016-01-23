@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		272FDFF21C53538C003747DA /* UberRides.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272FDFDB1C535325003747DA /* UberRides.framework */; };
+		272FDFF61C535D33003747DA /* planecircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 272FDFF51C535D33003747DA /* planecircle.png */; };
 		279CEBF41C5175990017C708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CEBF31C5175990017C708 /* AppDelegate.swift */; };
 		279CEBF61C5175990017C708 /* JustGoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CEBF51C5175990017C708 /* JustGoView.swift */; };
 		279CEBF91C5175990017C708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279CEBF71C5175990017C708 /* Main.storyboard */; };
@@ -23,34 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		272FDFDA1C535325003747DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 272FDFD51C535325003747DA /* UberRides.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AC0404751BFACD1D00AC1501;
-			remoteInfo = UberRides;
-		};
-		272FDFDC1C535325003747DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 272FDFD51C535325003747DA /* UberRides.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AC04047F1BFACD1D00AC1501;
-			remoteInfo = UberRidesTests;
-		};
-		272FDFE31C535329003747DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 272FDFDE1C535329003747DA /* UberRides.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AC0404751BFACD1D00AC1501;
-			remoteInfo = UberRides;
-		};
-		272FDFE51C535329003747DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 272FDFDE1C535329003747DA /* UberRides.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AC04047F1BFACD1D00AC1501;
-			remoteInfo = UberRidesTests;
-		};
 		272FDFEC1C53533F003747DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 272FDFE71C53533F003747DA /* UberRides.xcodeproj */;
@@ -64,13 +36,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = AC04047F1BFACD1D00AC1501;
 			remoteInfo = UberRidesTests;
-		};
-		272FDFF01C53534A003747DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 272FDFD51C535325003747DA /* UberRides.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AC0404741BFACD1D00AC1501;
-			remoteInfo = UberRides;
 		};
 		279CEC051C5175990017C708 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -89,9 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		272FDFD51C535325003747DA /* UberRides.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UberRides.xcodeproj; path = UberSource/UberRides.xcodeproj; sourceTree = SOURCE_ROOT; };
-		272FDFDE1C535329003747DA /* UberRides.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UberRides.xcodeproj; path = UberSource/UberRides.xcodeproj; sourceTree = SOURCE_ROOT; };
 		272FDFE71C53533F003747DA /* UberRides.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UberRides.xcodeproj; path = UberSource/UberRides.xcodeproj; sourceTree = "<group>"; };
+		272FDFF51C535D33003747DA /* planecircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planecircle.png; sourceTree = SOURCE_ROOT; };
 		279CEBF01C5175990017C708 /* JustGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279CEBF31C5175990017C708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		279CEBF51C5175990017C708 /* JustGoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustGoView.swift; sourceTree = "<group>"; };
@@ -117,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				272FDFF21C53538C003747DA /* UberRides.framework in Frameworks */,
 				27DDA94F1C532401006BEECA /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,24 +102,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		272FDFD61C535325003747DA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				272FDFDB1C535325003747DA /* UberRides.framework */,
-				272FDFDD1C535325003747DA /* UberRidesTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		272FDFDF1C535329003747DA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				272FDFE41C535329003747DA /* UberRides.framework */,
-				272FDFE61C535329003747DA /* UberRidesTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		272FDFE81C53533F003747DA /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,9 +169,8 @@
 		27DDA9451C51DD43006BEECA /* imgs */ = {
 			isa = PBXGroup;
 			children = (
-				272FDFDE1C535329003747DA /* UberRides.xcodeproj */,
-				272FDFD51C535325003747DA /* UberRides.xcodeproj */,
 				27DDA94A1C51FD58006BEECA /* plane.png */,
+				272FDFF51C535D33003747DA /* planecircle.png */,
 				27DDA94C1C530051006BEECA /* circle.png */,
 				27DDA9591C534387006BEECA /* topbar.png */,
 			);
@@ -248,7 +192,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				272FDFF11C53534A003747DA /* PBXTargetDependency */,
 			);
 			name = JustGo;
 			productName = JustGo;
@@ -337,16 +280,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 272FDFD61C535325003747DA /* Products */;
-					ProjectRef = 272FDFD51C535325003747DA /* UberRides.xcodeproj */;
-				},
-				{
 					ProductGroup = 272FDFE81C53533F003747DA /* Products */;
 					ProjectRef = 272FDFE71C53533F003747DA /* UberRides.xcodeproj */;
-				},
-				{
-					ProductGroup = 272FDFDF1C535329003747DA /* Products */;
-					ProjectRef = 272FDFDE1C535329003747DA /* UberRides.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -359,34 +294,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		272FDFDB1C535325003747DA /* UberRides.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = UberRides.framework;
-			remoteRef = 272FDFDA1C535325003747DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		272FDFDD1C535325003747DA /* UberRidesTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = UberRidesTests.xctest;
-			remoteRef = 272FDFDC1C535325003747DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		272FDFE41C535329003747DA /* UberRides.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = UberRides.framework;
-			remoteRef = 272FDFE31C535329003747DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		272FDFE61C535329003747DA /* UberRidesTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = UberRidesTests.xctest;
-			remoteRef = 272FDFE51C535329003747DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		272FDFED1C53533F003747DA /* UberRides.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -413,6 +320,7 @@
 				27DDA94D1C530051006BEECA /* circle.png in Resources */,
 				279CEBFB1C5175990017C708 /* Assets.xcassets in Resources */,
 				279CEBF91C5175990017C708 /* Main.storyboard in Resources */,
+				272FDFF61C535D33003747DA /* planecircle.png in Resources */,
 				27DDA95A1C534387006BEECA /* topbar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,11 +449,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		272FDFF11C53534A003747DA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = UberRides;
-			targetProxy = 272FDFF01C53534A003747DA /* PBXContainerItemProxy */;
-		};
 		279CEC061C5175990017C708 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 279CEBEF1C5175990017C708 /* JustGo */;

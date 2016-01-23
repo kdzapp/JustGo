@@ -21,21 +21,52 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topbar.png" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-Ry-N8k">
                                 <rect key="frame" x="65" y="0.0" width="471" height="81"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planecircle.png" translatesAutoresizingMaskIntoConstraints="NO" id="nwc-re-6G1">
+                                <rect key="frame" x="180" y="204" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="VWY-Tf-R8p"/>
+                                    <constraint firstAttribute="height" constant="128" id="pZI-yw-K4R"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzm-vw-PNR" customClass="RequestButton" customModule="UberRides">
-                                <rect key="frame" x="285" y="241" width="30" height="30"/>
+                                <rect key="frame" x="285" y="253" width="30" height="30"/>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f5a-uE-RIH">
+                                <rect key="frame" x="65" y="358" width="460" height="242"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="460" id="SuE-zp-UvM"/>
+                                </constraints>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LU-kf-kPf">
+                                <rect key="frame" x="194" y="89" width="212" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="212" id="BvX-DU-ebw"/>
+                                    <constraint firstAttribute="height" constant="107" id="uvo-V1-iaQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="76"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.60784313725490191" green="0.34901960784313724" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Gzm-vw-PNR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1L0-wZ-YDt"/>
                             <constraint firstItem="Aas-Ry-N8k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="45p-rD-vkE"/>
+                            <constraint firstItem="f5a-uE-RIH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-5" id="7Fd-fR-75X"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Aas-Ry-N8k" secondAttribute="bottom" constant="519" id="8e4-v0-v8V"/>
+                            <constraint firstItem="nwc-re-6G1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GCW-wK-i1s"/>
                             <constraint firstItem="Aas-Ry-N8k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="45" id="HAv-lm-zQD"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gzm-vw-PNR" secondAttribute="bottom" constant="329" id="QbY-gM-m8c"/>
+                            <constraint firstItem="6LU-kf-kPf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JGX-er-zuR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gzm-vw-PNR" secondAttribute="bottom" constant="317" id="QbY-gM-m8c"/>
+                            <constraint firstItem="f5a-uE-RIH" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="TQa-oQ-0i6"/>
+                            <constraint firstItem="6LU-kf-kPf" firstAttribute="top" secondItem="Aas-Ry-N8k" secondAttribute="bottom" constant="8" symbolic="YES" id="ZJD-q8-h1b"/>
                             <constraint firstItem="Aas-Ry-N8k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fJC-0Z-GR7"/>
+                            <constraint firstItem="f5a-uE-RIH" firstAttribute="top" secondItem="nwc-re-6G1" secondAttribute="bottom" constant="26" id="iq1-Ux-1SJ"/>
+                            <constraint firstItem="nwc-re-6G1" firstAttribute="centerY" secondItem="Gzm-vw-PNR" secondAttribute="centerY" id="rn3-Bf-MsW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="planeCircle" destination="nwc-re-6G1" id="02P-FT-OzW"/>
                         <outlet property="uberButton" destination="Gzm-vw-PNR" id="6bV-yK-lpE"/>
                     </connections>
                 </viewController>
@@ -105,6 +136,7 @@
     </scenes>
     <resources>
         <image name="plane.png" width="540" height="960"/>
+        <image name="planecircle.png" width="500" height="500"/>
         <image name="topbar.png" width="1920" height="360"/>
     </resources>
 </document>
