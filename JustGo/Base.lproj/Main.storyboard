@@ -65,15 +65,23 @@
                             <constraint firstItem="f5a-uE-RIH" firstAttribute="top" secondItem="nwc-re-6G1" secondAttribute="bottom" constant="26" id="iq1-Ux-1SJ"/>
                             <constraint firstItem="nwc-re-6G1" firstAttribute="centerY" secondItem="Gzm-vw-PNR" secondAttribute="centerY" id="rn3-Bf-MsW"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tX5-95-y6C" appends="YES" id="lna-vC-gbd"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="costLabel" destination="6LU-kf-kPf" id="JcP-F5-0As"/>
                         <outlet property="planeCircle" destination="nwc-re-6G1" id="02P-FT-OzW"/>
+                        <outlet property="screenGesture" destination="tX5-95-y6C" id="Gfi-4C-GCP"/>
                         <outlet property="tripMap" destination="f5a-uE-RIH" id="Rxv-Nj-2La"/>
                         <outlet property="uberButton" destination="Gzm-vw-PNR" id="6bV-yK-lpE"/>
+                        <segue destination="Cp1-TX-ya1" kind="show" identifier="backHome" id="7jx-FQ-14y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="tX5-95-y6C">
+                    <rectEdge key="edges" top="YES"/>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="495" y="321"/>
         </scene>
@@ -109,11 +117,34 @@
                                     <constraint firstAttribute="width" constant="200" id="hZc-1s-JZx"/>
                                 </constraints>
                             </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fd-nL-fUG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SFr-mo-7OY">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drag the plane" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioc-st-HPW">
+                                            <rect key="frame" x="170.5" y="275" width="260" height="49"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="0.75" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ioc-st-HPW" firstAttribute="centerY" secondItem="SFr-mo-7OY" secondAttribute="centerY" id="JYH-Zf-bID"/>
+                                        <constraint firstItem="ioc-st-HPW" firstAttribute="centerX" secondItem="SFr-mo-7OY" secondAttribute="centerX" id="ROf-dM-Eez"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.22745098039215686" green="0.0" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="3fd-nL-fUG" firstAttribute="width" secondItem="Pce-b2-zWL" secondAttribute="width" id="2vG-0b-k8e"/>
+                            <constraint firstItem="3fd-nL-fUG" firstAttribute="height" secondItem="Pce-b2-zWL" secondAttribute="height" id="354-vg-Rqt"/>
                             <constraint firstItem="0vI-wp-jd4" firstAttribute="top" secondItem="DLK-Ve-xhI" secondAttribute="bottom" constant="400" id="BL7-UU-gyE"/>
                             <constraint firstItem="9uf-sw-lzz" firstAttribute="centerX" secondItem="DLK-Ve-xhI" secondAttribute="centerX" id="Bf6-Fk-Dam"/>
+                            <constraint firstItem="3fd-nL-fUG" firstAttribute="centerY" secondItem="Pce-b2-zWL" secondAttribute="centerY" id="EXB-zZ-2OB"/>
                             <constraint firstItem="hnm-1x-DqP" firstAttribute="centerX" secondItem="Pce-b2-zWL" secondAttribute="centerX" id="H02-ed-Yvc"/>
                             <constraint firstItem="9uf-sw-lzz" firstAttribute="centerY" secondItem="Pce-b2-zWL" secondAttribute="centerY" id="Nzq-qx-Q7c"/>
                             <constraint firstItem="hnm-1x-DqP" firstAttribute="bottom" secondItem="0vI-wp-jd4" secondAttribute="top" id="ZXc-5F-5ks"/>
@@ -122,10 +153,12 @@
                             <constraint firstItem="hnm-1x-DqP" firstAttribute="leading" secondItem="DLK-Ve-xhI" secondAttribute="leading" id="cRn-An-5d5"/>
                             <constraint firstItem="9uf-sw-lzz" firstAttribute="centerX" secondItem="Pce-b2-zWL" secondAttribute="centerX" id="oHg-1d-OpG"/>
                             <constraint firstItem="DLK-Ve-xhI" firstAttribute="leading" secondItem="Pce-b2-zWL" secondAttribute="leading" id="pp8-fm-JUo"/>
+                            <constraint firstItem="3fd-nL-fUG" firstAttribute="centerX" secondItem="Pce-b2-zWL" secondAttribute="centerX" id="sxE-dp-8PO"/>
                             <constraint firstItem="DLK-Ve-xhI" firstAttribute="top" secondItem="Pce-b2-zWL" secondAttribute="top" id="zaw-CW-quG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blurEffect" destination="3fd-nL-fUG" id="i2B-Iv-Qor"/>
                         <outlet property="flyLabel" destination="DLK-Ve-xhI" id="gfW-m8-ZPe"/>
                         <outlet property="localLabel" destination="hnm-1x-DqP" id="bOj-Na-lm0"/>
                         <outlet property="plane" destination="9uf-sw-lzz" id="5cj-ZE-Ixk"/>

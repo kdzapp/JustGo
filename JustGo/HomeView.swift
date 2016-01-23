@@ -13,6 +13,7 @@ class HomeView: UIViewController {
     @IBOutlet weak var flyLabel: UILabel!
     @IBOutlet weak var localLabel: UILabel!
     @IBOutlet weak var plane: UIImageView!
+    @IBOutlet weak var blurEffect: UIVisualEffectView!
     
     var location = CGPoint(x:85 , y: 200)
     var size = CGSize(width: 200, height: 240)
@@ -22,6 +23,7 @@ class HomeView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         plane.frame = CGRect(origin: location, size: size)
+        planeBounce()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -90,6 +92,21 @@ class HomeView: UIViewController {
         super.didReceiveMemoryWarning()
         plane.frame = CGRect(origin: location, size: size)
         // Dispose of any resources that can be recreated.
+    }
+
+    func planeBounce()
+    {
+        UIView.animateWithDuration(2.0) { () -> Void in
+            self.blurEffect.alpha = 0
+        }
+        UIView.animateWithDuration(2.0, delay: 1.5, usingSpringWithDamping: 0.1, initialSpringVelocity: 10, options: .BeginFromCurrentState, animations: { () -> Void in
+            self.location.y = self.location.y + 70
+            self.plane.frame = CGRect(origin: self.location, size: self.size)
+            //self.location.y = self.location.y - 70
+            //self.plane.frame = CGRect(origin: self.location, size: self.size)
+            }) { (complete) -> Void in
+            print(complete)
+        }
     }
     
     func planeNoFly()

@@ -13,10 +13,12 @@ import MapKit
 
 class JustGoView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
 
+    @IBOutlet var screenGesture: UIScreenEdgePanGestureRecognizer!
     @IBOutlet weak var costLabel: UILabel!
     @IBOutlet weak var tripMap: MKMapView!
     @IBOutlet weak var planeCircle: UIImageView!
     @IBOutlet weak var uberButton: RequestButton!
+    
     var locationManager: CLLocationManager!
     var localBool: Bool = true
     var coords = CLLocationCoordinate2D(latitude: 40.7127, longitude: 74.0059)
@@ -142,6 +144,14 @@ class JustGoView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
             
             let testLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 48.8567, longitude: 2.3508)
             
+            let span = MKCoordinateSpanMake(100, 100)
+            let region = MKCoordinateRegion(center: (CLLocationCoordinate2D(latitude: testLocation.latitude, longitude: testLocation.longitude)), span: span)
+            tripMap.setRegion(region, animated: true)
+            
+            let dropPin = MKPointAnnotation()
+            dropPin.coordinate = testLocation
+            tripMap.addAnnotation(dropPin)
+            
             return testLocation
         }
     }
@@ -197,27 +207,11 @@ class JustGoView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
     }
 }
 
-func createActivity(location: Bool) -> Void
-{
-    //Create a list of activites?
-    //Average Cost? NSDictionary?
-    //get location of activity
-    //return location of activity
-}
-
 func getAirFare(location: String) -> Int
 {
     //This is for SkyScanner.... getFare for a specified location
     return 0
 }
-
-func getUberFare(currentLocation: String, gotoLocation: String)
-{
-   // button.setProductID("abc123-productID")
-   // button.setPickupLocation(latitude: "37.770", longitude: "-122.466", nickname: "California Academy of Sciences")
-   // button.setDropoffLocation(latitude: "37.791", longitude: "-122.405", nickname: "Pier 39")
-}
-
 
 
 
