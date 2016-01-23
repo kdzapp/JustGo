@@ -12,6 +12,7 @@
 		272FDFFA1C53FE2C003747DA /* topbaractivity.png in Resources */ = {isa = PBXBuildFile; fileRef = 272FDFF91C53FE2C003747DA /* topbaractivity.png */; };
 		272FE00A1C5428DC003747DA /* UberRides.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272FDFED1C53533F003747DA /* UberRides.framework */; };
 		272FE00B1C5428DC003747DA /* UberRides.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 272FDFED1C53533F003747DA /* UberRides.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		272FE0101C542DA2003747DA /* bowling.png in Resources */ = {isa = PBXBuildFile; fileRef = 272FE00F1C542DA2003747DA /* bowling.png */; };
 		279CEBF41C5175990017C708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CEBF31C5175990017C708 /* AppDelegate.swift */; };
 		279CEBF61C5175990017C708 /* JustGoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279CEBF51C5175990017C708 /* JustGoView.swift */; };
 		279CEBF91C5175990017C708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279CEBF71C5175990017C708 /* Main.storyboard */; };
@@ -90,6 +91,7 @@
 		272FDFF51C535D33003747DA /* planecircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planecircle.png; sourceTree = SOURCE_ROOT; };
 		272FDFF71C53FD5A003747DA /* ActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		272FDFF91C53FE2C003747DA /* topbaractivity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topbaractivity.png; sourceTree = SOURCE_ROOT; };
+		272FE00F1C542DA2003747DA /* bowling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bowling.png; sourceTree = SOURCE_ROOT; };
 		279CEBF01C5175990017C708 /* JustGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279CEBF31C5175990017C708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		279CEBF51C5175990017C708 /* JustGoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustGoView.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		27DDA9451C51DD43006BEECA /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				272FE00F1C542DA2003747DA /* bowling.png */,
 				27DDA94A1C51FD58006BEECA /* plane.png */,
 				272FDFF51C535D33003747DA /* planecircle.png */,
 				27DDA94C1C530051006BEECA /* circle.png */,
@@ -362,6 +365,7 @@
 				27DDA94D1C530051006BEECA /* circle.png in Resources */,
 				279CEBFB1C5175990017C708 /* Assets.xcassets in Resources */,
 				279CEBF91C5175990017C708 /* Main.storyboard in Resources */,
+				272FE0101C542DA2003747DA /* bowling.png in Resources */,
 				272FDFF61C535D33003747DA /* planecircle.png in Resources */,
 				27DDA95A1C534387006BEECA /* topbar.png in Resources */,
 			);

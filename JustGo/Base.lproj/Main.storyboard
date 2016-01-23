@@ -166,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMD-m7-m0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-158" y="321"/>
+            <point key="canvasLocation" x="-326" y="321"/>
         </scene>
         <!--Activity View-->
         <scene sceneID="v1o-1e-Zng">
@@ -176,8 +176,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topbaractivity.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jt9-Qs-0Qn">
-                                <rect key="frame" x="63" y="0.0" width="474" height="96"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bowling" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfO-Xt-fak">
+                                <rect key="frame" x="155" y="229" width="291" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118" id="sCp-3f-ePa"/>
+                                    <constraint firstAttribute="width" constant="291" id="szH-dZ-vEJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="66"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bowling.png" translatesAutoresizingMaskIntoConstraints="NO" id="NVe-2e-m9n">
+                                <rect key="frame" x="180" y="115" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="2SE-11-MMd"/>
+                                    <constraint firstAttribute="height" constant="128" id="B6e-sj-5Lj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1hr 30mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xou-zs-7fr">
+                                <rect key="frame" x="155" y="490" width="291" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="1Y6-MT-uru"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pv-xU-adv">
+                                <rect key="frame" x="63" y="366" width="474" height="121"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topbaractivity.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jt9-Qs-0Qn">
+                                <rect key="frame" x="63" y="-7" width="474" height="96"/>
                                 <color key="backgroundColor" red="0.82745098039215681" green="0.32941176470588235" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="1nW-5T-TKX"/>
@@ -186,18 +218,31 @@
                         </subviews>
                         <color key="backgroundColor" red="0.82745098039215681" green="0.32941176470588235" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Jt9-Qs-0Qn" firstAttribute="top" secondItem="YxN-pi-tQO" secondAttribute="top" id="EME-l0-3aZ"/>
+                            <constraint firstItem="SfO-Xt-fak" firstAttribute="top" secondItem="YxN-pi-tQO" secondAttribute="top" constant="229" id="83M-RO-wrw"/>
+                            <constraint firstItem="5Pv-xU-adv" firstAttribute="top" secondItem="SfO-Xt-fak" secondAttribute="bottom" constant="19" id="BDf-v2-yFu"/>
+                            <constraint firstItem="Jt9-Qs-0Qn" firstAttribute="top" secondItem="YxN-pi-tQO" secondAttribute="top" constant="-7" id="EME-l0-3aZ"/>
                             <constraint firstItem="Jt9-Qs-0Qn" firstAttribute="leading" secondItem="YxN-pi-tQO" secondAttribute="leadingMargin" constant="43" id="Gh5-A8-Aa0"/>
+                            <constraint firstItem="5Pv-xU-adv" firstAttribute="centerX" secondItem="YxN-pi-tQO" secondAttribute="centerX" id="Jta-At-gaK"/>
+                            <constraint firstItem="NVe-2e-m9n" firstAttribute="centerX" secondItem="YxN-pi-tQO" secondAttribute="centerX" id="KRw-sz-UNs"/>
+                            <constraint firstItem="Xou-zs-7fr" firstAttribute="leading" secondItem="SfO-Xt-fak" secondAttribute="leading" id="NrM-Y2-PIr"/>
+                            <constraint firstItem="NVe-2e-m9n" firstAttribute="centerX" secondItem="SfO-Xt-fak" secondAttribute="centerX" id="QhG-8Y-SVX"/>
+                            <constraint firstItem="NVe-2e-m9n" firstAttribute="top" secondItem="Jt9-Qs-0Qn" secondAttribute="bottom" constant="26" id="WIZ-SP-Ofj"/>
                             <constraint firstItem="Jt9-Qs-0Qn" firstAttribute="centerX" secondItem="YxN-pi-tQO" secondAttribute="centerX" id="b9W-CU-DOZ"/>
+                            <constraint firstItem="5Pv-xU-adv" firstAttribute="leading" secondItem="Jt9-Qs-0Qn" secondAttribute="leading" id="d0Q-Qu-PLq"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Xou-zs-7fr" secondAttribute="bottom" constant="30" id="jnP-O3-kE3"/>
+                            <constraint firstItem="Xou-zs-7fr" firstAttribute="centerX" secondItem="YxN-pi-tQO" secondAttribute="centerX" id="q05-M5-W6N"/>
+                            <constraint firstItem="Xou-zs-7fr" firstAttribute="top" secondItem="5Pv-xU-adv" secondAttribute="bottom" constant="3" id="rBw-3B-IRo"/>
+                            <constraint firstItem="SfO-Xt-fak" firstAttribute="centerX" secondItem="YxN-pi-tQO" secondAttribute="centerX" id="y7Y-BZ-Tin"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOM-M8-my6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="321"/>
+            <point key="canvasLocation" x="1206" y="321"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bowling.png" width="340" height="340"/>
         <image name="plane.png" width="540" height="960"/>
         <image name="planecircle.png" width="500" height="500"/>
         <image name="topbar.png" width="1920" height="360"/>
