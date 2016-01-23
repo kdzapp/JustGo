@@ -17,11 +17,20 @@ class HomeView: UIViewController {
     var location = CGPoint(x:85 , y: 200)
     var size = CGSize(width: 200, height: 240)
     var selection: Bool = false
+    var localBool: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         plane.frame = CGRect(origin: location, size: size)
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
+    {
+        if let viewController: JustGoView = segue.destinationViewController as? JustGoView
+        {
+            viewController.localBool = localBool
+        }
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
@@ -93,7 +102,7 @@ class HomeView: UIViewController {
             if(finished)
             {
                 print("finished!")
-                //Segue Here to JustGoView with 'local = true;'
+                self.localBool = true
                 sleep(1)
                 self.performSegueWithIdentifier("toJustGo", sender: nil)
             }
@@ -110,7 +119,7 @@ class HomeView: UIViewController {
                 if(finished)
                 {
                     print("finished!")
-                    //Segue Here to JustGoView with 'local = false'
+                    self.localBool = false
                     sleep(1)
                     self.performSegueWithIdentifier("toJustGo", sender: nil)
                 }

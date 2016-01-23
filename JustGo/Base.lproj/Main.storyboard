@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Just Go View-->
@@ -16,8 +17,27 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topbar.png" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-Ry-N8k">
+                                <rect key="frame" x="65" y="0.0" width="471" height="81"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzm-vw-PNR" customClass="RequestButton" customModule="UberRides">
+                                <rect key="frame" x="285" y="241" width="30" height="30"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60784313725490191" green="0.34901960784313724" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Gzm-vw-PNR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1L0-wZ-YDt"/>
+                            <constraint firstItem="Aas-Ry-N8k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="45p-rD-vkE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Aas-Ry-N8k" secondAttribute="bottom" constant="519" id="8e4-v0-v8V"/>
+                            <constraint firstItem="Aas-Ry-N8k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="45" id="HAv-lm-zQD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gzm-vw-PNR" secondAttribute="bottom" constant="329" id="QbY-gM-m8c"/>
+                            <constraint firstItem="Aas-Ry-N8k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fJC-0Z-GR7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="uberButton" destination="Gzm-vw-PNR" id="6bV-yK-lpE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,5 +105,6 @@
     </scenes>
     <resources>
         <image name="plane.png" width="540" height="960"/>
+        <image name="topbar.png" width="1920" height="360"/>
     </resources>
 </document>

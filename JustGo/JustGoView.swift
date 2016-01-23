@@ -7,20 +7,35 @@
 //
 
 import UIKit
+import UberRides
 
 class JustGoView: UIViewController {
-    
-    var localBool = true;
 
+    @IBOutlet weak var uberButton: RequestButton!
+    var localBool: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if(localBool)
+        {
+        }
+        else
+        {
+            disableUber()
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         
+    }
+    
+    func disableUber()
+    {
+        uberButton.enabled = false;
+        uberButton.alpha = 0;
     }
 
 
