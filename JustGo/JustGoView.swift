@@ -223,7 +223,7 @@ class JustGoView: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
     func getAirFare(location: CLLocation)
     {
         //This is for SkyScanner.... getFare for a specified location
-        costLabel.text = "$223"
+        costLabel.text = "$2,203"
     }
 }
 
